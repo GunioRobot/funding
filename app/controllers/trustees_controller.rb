@@ -1,11 +1,11 @@
 class TrusteesController < ApplicationController
 
   before_filter :require_no_user, :only => [:new, :create]
-  
+
   def index
     @user = User.new
   end
-  
+
   def create
     @user = User.new(params[:user])
 
@@ -17,11 +17,11 @@ class TrusteesController < ApplicationController
     end
 
   end
-  
+
   def success
     flash[:notice] = "Thanks for contributing to the future success of scaleable businesses!" if true
   end
-  
+
   def give
   end
 

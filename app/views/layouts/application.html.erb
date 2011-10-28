@@ -7,8 +7,8 @@
   <%= stylesheet_link_tag "styles" %>
   <%= javascript_include_tag :defaults %>
   <%= javascript_include_tag "curvycorners" %>
-  
-  <script type="text/JavaScript"> 
+
+  <script type="text/JavaScript">
     window.onload = function() {
       var settings = {
         tl: { radius: 10 },
@@ -16,11 +16,11 @@
         bl: { radius: 10 },
         br: { radius: 10 },
         antiAlias: true
-      } 
-      
-      var divObj = document.getElementById("container"); 
-      var divObj2 = document.getElementById("leftcolumn"); 
-      
+      }
+
+      var divObj = document.getElementById("container");
+      var divObj2 = document.getElementById("leftcolumn");
+
       curvyCorners(settings, divObj, divObj2);
     }
 
@@ -41,13 +41,13 @@
     <%= render :partial => "layouts/right_col"%>
   </div>
   <div id="leftcolumn">
-    
+
     <% if flash[:notice] %>
       <div id="flash" class="red">
         <%= flash[:notice] %>
       </div>
     <% end %>
-    
+
     <%= yield %>
   </div>
   <div class="clear">&nbsp;</div>

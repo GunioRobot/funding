@@ -13,7 +13,7 @@ ActionController::Routing::Routes.draw do |map|
   #   map.resources :products
   map.success '/trustees/success', :controller => "trustees", :action => "success"
   map.give '/trustees/give', :controller => "trustees", :action => "give"
-  
+
   map.resources :entries
   map.resources :trustees
   map.resources :grants
@@ -24,13 +24,13 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :account, :controller => "users"
   map.resources :users
   map.resource :user_session
-  
+
   # Sample resource route with options:
   #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
 
   # Sample resource route with sub-resources:
   #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-  
+
   # Sample resource route with more complex sub-resources
   #   map.resources :products do |products|
   #     products.resources :comments

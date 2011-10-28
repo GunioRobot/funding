@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
-  acts_as_authentic 
+  acts_as_authentic
 
   after_create :email_trustee_app
-  
+
   private
 
   def email_trustee_app
